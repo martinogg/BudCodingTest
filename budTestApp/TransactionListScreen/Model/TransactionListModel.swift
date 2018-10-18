@@ -14,6 +14,18 @@ enum TransactionListNetworkResponse {
     case success([TransactionListNetworkElement])
 }
 
+class TransactionAmountData: Mappable {
+    var data: [TransactionListNetworkElement]?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        data <- map["data"]
+    }
+}
+
 class TransactionListNetworkElement: Mappable {
     
     var id: String?

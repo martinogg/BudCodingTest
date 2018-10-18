@@ -10,20 +10,22 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
+let URL = "https://www.mocky.io/v2/5b33bdb43200008f0ad1e256" // Hard coded URLs FTW
+
 class TransactionListNetwork: TransactionListNetworkProtocol {
     
     func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->() ) {
         
-        let URL = "https://www.mocky.io/v2/5b33bdb43200008f0ad1e256"
-        Alamofire.request(URL).responseArray { (response: DataResponse<[TransactionListNetworkElement]>) in
+        Alamofire.request(URL).responseObject { (response: DataResponse<TransactionAmountData>) in
             
-            guard let successResponse = response.result.value else {
+            guard let successResponse = response.result.value,
+                let responseArray = successResponse.data else {
                 
                 onComplete(.error)
                 return
             }
             
-            onComplete(.success(successResponse))
+            onComplete(.success(responseArray))
         }
     }
 }
