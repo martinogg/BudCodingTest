@@ -77,6 +77,7 @@ extension TransactionListViewController { // UITableViewDelegate and datasource
             
         if let transactionCell = result as? TransactionListCell {
             
+            transactionCell.cacheService = self.viewModel?.imageCache
             transactionCell.configure(with: self.transactionList[indexPath.row])
         }
         

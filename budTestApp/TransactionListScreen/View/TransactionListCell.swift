@@ -12,6 +12,9 @@ class TransactionListCell: UITableViewCell, TransactionListCellProtocol {
     var cacheService: TransactionListImageCacheProtocol?
     
     @IBOutlet var icon: UIImageView!
+    @IBOutlet var name1: UILabel!
+    @IBOutlet var name2: UILabel!
+    @IBOutlet var price: UILabel!
     
     func configure(with element:TransactionListNetworkElement) {
         
@@ -23,5 +26,11 @@ class TransactionListCell: UITableViewCell, TransactionListCellProtocol {
                 self.icon.image = image
             })
         }
+        
+        self.name1.text = element.description
+        self.name2.text = element.product?.title
+        let value = element.amount?.value ?? 0.0
+        let currency = element.currency ?? ""
+        self.price.text = "\(value) \(currency)"
     }
 }

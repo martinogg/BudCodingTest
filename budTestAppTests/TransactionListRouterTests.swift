@@ -24,6 +24,8 @@ class TransactionListRouterTests: XCTestCase {
         XCTAssert(mockVC.viewModel?.viewController != nil)
         XCTAssert(mockVC.viewModel?.router != nil)
         XCTAssert(mockVC.viewModel?.network != nil)
+        XCTAssert(mockVC.viewModel?.imageCache != nil)
+        
     }
 
 }

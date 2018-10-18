@@ -15,10 +15,12 @@ class TransactionListRouter: TransactionListRouterProtocol {
         let viewModel = TransactionListViewModel()
         let router = TransactionListRouter()
         let network = TransactionListNetwork()
+        let imageCache = TransactionListImageCache()
         
         viewModel.viewController = transactionViewController
         viewModel.router = router
         viewModel.network = network
+        viewModel.imageCache = imageCache
         transactionViewController.viewModel = viewModel        
     }
 }

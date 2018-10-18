@@ -13,6 +13,7 @@ class TransactionListViewModel: TransactionListViewModelProtocol {
     var router: TransactionListRouterProtocol?
     weak var viewController: TransactionListViewControllerProtocol?
     var network: TransactionListNetworkProtocol?
+    var imageCache: TransactionListImageCacheProtocol?
     
     func refreshButtonPressed() {
         // TODO TEST

@@ -10,6 +10,7 @@ import Foundation
 @testable import budTestApp
 
 class MockTransactionListViewModel: TransactionListViewModelProtocol {
+    var imageCache: TransactionListImageCacheProtocol?
     weak var viewController: TransactionListViewControllerProtocol?
     var router: TransactionListRouterProtocol?
     var network: TransactionListNetworkProtocol?
