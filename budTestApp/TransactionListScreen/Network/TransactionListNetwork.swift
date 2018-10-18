@@ -7,15 +7,23 @@
 //
 
 import Foundation
+import Alamofire
+import AlamofireObjectMapper
 
 class TransactionListNetwork: TransactionListNetworkProtocol {
     
     func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->() ) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            // TODO Alamofire request
+        let URL = "https://www.mocky.io/v2/5b33bdb43200008f0ad1e256"
+        Alamofire.request(URL).responseArray { (response: DataResponse<[TransactionListNetworkElement]>) in
             
-            onComplete( TransactionListNetworkResponse.success([TransactionListNetworkElement.init(name: "A"), TransactionListNetworkElement.init(name: "B"), TransactionListNetworkElement.init(name: "C")]) )
+            guard let successResponse = response.result.value else {
+                
+                onComplete(.error)
+                return
+            }
+            
+            onComplete(.success(successResponse))
         }
     }
 }

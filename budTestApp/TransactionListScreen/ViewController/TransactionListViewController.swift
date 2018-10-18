@@ -22,21 +22,30 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
         self.viewModel?.refreshButtonPressed()
     }
     
-    func showLoadingScreen(_ show: Bool) {
+    func showLoadingScreen(_ show: Bool, onComplete: (()->())?) {
         // TODO TEST
         
         if (show) {
             
-            self.present(self.refreshingAlert, animated: true, completion: nil)
+            self.present(self.refreshingAlert, animated: true, completion: {
+                
+                onComplete?()
+            })
         } else {
                 
-            self.refreshingAlert.dismiss(animated: true, completion: nil)
+            self.refreshingAlert.dismiss(animated: true, completion: {
+            
+                onComplete?()
+            })
         }
     }
     
     func showErrorMessage() {
         
-        self.present(self.errorAlert, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Error", message: "An Error Occurred", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func update(elements: [TransactionListNetworkElement]) {
@@ -47,13 +56,5 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     lazy var refreshingAlert: UIAlertController = {
         
         return UIAlertController(title: "Refreshing", message: "Please wait", preferredStyle: .alert)
-    }()
-    
-    lazy var errorAlert: UIAlertController = {
-        
-        let result = UIAlertController(title: "Error", message: "An Error Occurred", preferredStyle: .alert)
-        result.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        
-        return result
     }()
 }

@@ -17,22 +17,20 @@ class TransactionListViewModel: TransactionListViewModelProtocol {
     func refreshButtonPressed() {
         // TODO TEST
         
-        self.viewController?.showLoadingScreen(true)
+        self.viewController?.showLoadingScreen(true, onComplete: nil)
         self.network?.requestTransactionList(onComplete: { [unowned self] (response) in
             
-            self.viewController?.showLoadingScreen(false)
-            
-            switch (response) {
-            case .error:
+            self.viewController?.showLoadingScreen(false, onComplete: {
                 
-                self.viewController?.showErrorMessage()
-            case .success(let elements):
-                
-                self.viewController?.update(elements: elements)
-            }
+                switch (response) {
+                case .error:
+                    
+                    self.viewController?.showErrorMessage()
+                case .success(let elements):
+                    
+                    self.viewController?.update(elements: elements)
+                }
+            })
         })
-        
     }
-    
-    
 }

@@ -12,7 +12,7 @@ protocol TransactionListViewControllerProtocol: class {
     
     var viewModel: TransactionListViewModelProtocol? {get set}
     
-    func showLoadingScreen(_ show: Bool);
+    func showLoadingScreen(_ show: Bool, onComplete: (()->())?)
     func showErrorMessage()
     func update(elements: [TransactionListNetworkElement])
 }

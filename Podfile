@@ -6,6 +6,7 @@ target 'budTestApp' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireObjectMapper', '~> 5.0'
 
   # Pods for budTestApp
 
