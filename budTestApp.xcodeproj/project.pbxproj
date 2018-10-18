@@ -15,6 +15,12 @@
 		EE989256217910B900996C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE989255217910B900996C45 /* Assets.xcassets */; };
 		EE989259217910B900996C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989257217910B900996C45 /* LaunchScreen.storyboard */; };
 		EE989264217910B900996C45 /* budTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE989263217910B900996C45 /* budTestAppTests.swift */; };
+		EE9892712179160000996C45 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892702179160000996C45 /* TransactionListViewController.swift */; };
+		EE9892742179165D00996C45 /* TransactionListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892732179165D00996C45 /* TransactionListProtocols.swift */; };
+		EE9892772179169B00996C45 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892762179169B00996C45 /* TransactionListViewModel.swift */; };
+		EE98927A2179177400996C45 /* TransactionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892792179177400996C45 /* TransactionListRouter.swift */; };
+		EE98927C21791A5700996C45 /* TransactionListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */; };
+		EE98927E21791B1600996C45 /* TransactionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,12 @@
 		EE98925F217910B900996C45 /* budTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE989263217910B900996C45 /* budTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = budTestAppTests.swift; sourceTree = "<group>"; };
 		EE989265217910B900996C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9892702179160000996C45 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		EE9892732179165D00996C45 /* TransactionListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListProtocols.swift; sourceTree = "<group>"; };
+		EE9892762179169B00996C45 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		EE9892792179177400996C45 /* TransactionListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRouter.swift; sourceTree = "<group>"; };
+		EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRouterTests.swift; sourceTree = "<group>"; };
+		EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerTests.swift; sourceTree = "<group>"; };
 		F7F3CDD4ED977575D355D529 /* Pods-budTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-budTestApp/Pods-budTestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +121,7 @@
 		EE98924D217910B800996C45 /* budTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				EE98926E2179150100996C45 /* TransactionListScreen */,
 				EE98924E217910B800996C45 /* AppDelegate.swift */,
 				EE989250217910B800996C45 /* ViewController.swift */,
 				EE989252217910B800996C45 /* Main.storyboard */,
@@ -124,8 +137,53 @@
 			children = (
 				EE989263217910B900996C45 /* budTestAppTests.swift */,
 				EE989265217910B900996C45 /* Info.plist */,
+				EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */,
+				EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */,
 			);
 			path = budTestAppTests;
+			sourceTree = "<group>";
+		};
+		EE98926E2179150100996C45 /* TransactionListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EE9892782179174600996C45 /* Router */,
+				EE9892752179168200996C45 /* ViewModel */,
+				EE9892722179164500996C45 /* Protocols */,
+				EE98926F2179154A00996C45 /* ViewController */,
+			);
+			path = TransactionListScreen;
+			sourceTree = "<group>";
+		};
+		EE98926F2179154A00996C45 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE9892702179160000996C45 /* TransactionListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE9892722179164500996C45 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE9892732179165D00996C45 /* TransactionListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EE9892752179168200996C45 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE9892762179169B00996C45 /* TransactionListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EE9892782179174600996C45 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EE9892792179177400996C45 /* TransactionListRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,8 +359,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9892742179165D00996C45 /* TransactionListProtocols.swift in Sources */,
+				EE9892772179169B00996C45 /* TransactionListViewModel.swift in Sources */,
 				EE989251217910B800996C45 /* ViewController.swift in Sources */,
+				EE9892712179160000996C45 /* TransactionListViewController.swift in Sources */,
 				EE98924F217910B800996C45 /* AppDelegate.swift in Sources */,
+				EE98927A2179177400996C45 /* TransactionListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE98927C21791A5700996C45 /* TransactionListRouterTests.swift in Sources */,
 				EE989264217910B900996C45 /* budTestAppTests.swift in Sources */,
+				EE98927E21791B1600996C45 /* TransactionListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
