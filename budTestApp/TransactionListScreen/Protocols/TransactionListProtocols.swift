@@ -12,15 +12,25 @@ protocol TransactionListViewControllerProtocol: class {
     
     var viewModel: TransactionListViewModelProtocol? {get set}
     
+    func showLoadingScreen(_ show: Bool);
+    func showErrorMessage()
+    func update(elements: [TransactionListNetworkElement])
 }
 
 protocol TransactionListViewModelProtocol: class {
     
     var viewController: TransactionListViewControllerProtocol? {get set}
     var router: TransactionListRouterProtocol? {get set}
+    var network: TransactionListNetworkProtocol? {get set}
+    
+    func refreshButtonPressed()
 }
 
 protocol TransactionListRouterProtocol: class {
     
+}
+
+protocol TransactionListNetworkProtocol: class {
     
+    func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->())
 }

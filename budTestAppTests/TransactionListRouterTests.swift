@@ -15,10 +15,6 @@ class TransactionListRouterTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testAttachTransactionListModule() {
         let mockVC = TransactionListViewController()
         
@@ -27,6 +23,7 @@ class TransactionListRouterTests: XCTestCase {
         XCTAssert(mockVC.viewModel != nil)
         XCTAssert(mockVC.viewModel?.viewController != nil)
         XCTAssert(mockVC.viewModel?.router != nil)
+        XCTAssert(mockVC.viewModel?.network != nil)
     }
 
 }

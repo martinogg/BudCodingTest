@@ -12,7 +12,27 @@ class TransactionListViewModel: TransactionListViewModelProtocol {
     
     var router: TransactionListRouterProtocol?
     weak var viewController: TransactionListViewControllerProtocol?
+    var network: TransactionListNetworkProtocol?
     
+    func refreshButtonPressed() {
+        // TODO TEST
+        
+        self.viewController?.showLoadingScreen(true)
+        self.network?.requestTransactionList(onComplete: { [unowned self] (response) in
+            
+            self.viewController?.showLoadingScreen(false)
+            
+            switch (response) {
+            case .error:
+                
+                self.viewController?.showErrorMessage()
+            case .success(let elements):
+                
+                self.viewController?.update(elements: elements)
+            }
+        })
+        
+    }
     
     
 }

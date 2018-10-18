@@ -17,5 +17,43 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
         TransactionListRouter.attachTransactionListModule(to: self)
     }
     
+    @IBAction func refreshButtonPressed() {
+        
+        self.viewModel?.refreshButtonPressed()
+    }
     
+    func showLoadingScreen(_ show: Bool) {
+        // TODO TEST
+        
+        if (show) {
+            
+            self.present(self.refreshingAlert, animated: true, completion: nil)
+        } else {
+                
+            self.refreshingAlert.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func showErrorMessage() {
+        
+        self.present(self.errorAlert, animated: true, completion: nil)
+    }
+    
+    func update(elements: [TransactionListNetworkElement]) {
+        
+        // TODO!
+    }
+    
+    lazy var refreshingAlert: UIAlertController = {
+        
+        return UIAlertController(title: "Refreshing", message: "Please wait", preferredStyle: .alert)
+    }()
+    
+    lazy var errorAlert: UIAlertController = {
+        
+        let result = UIAlertController(title: "Error", message: "An Error Occurred", preferredStyle: .alert)
+        result.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        
+        return result
+    }()
 }
