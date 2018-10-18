@@ -6,7 +6,7 @@
 //  Copyright © 2018 martin ogg. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol TransactionListViewControllerProtocol: class {
     
@@ -33,4 +33,16 @@ protocol TransactionListRouterProtocol: class {
 protocol TransactionListNetworkProtocol: class {
     
     func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->())
+}
+
+protocol TransactionListImageCacheProtocol: class {
+    
+    func image(urlString: String, onSucceed: @escaping (UIImage)->())
+}
+
+protocol TransactionListCellProtocol: class {
+    
+    var cacheService: TransactionListImageCacheProtocol? {get set}
+    
+    func configure(with element:TransactionListNetworkElement)
 }

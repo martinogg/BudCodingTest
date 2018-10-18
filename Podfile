@@ -7,6 +7,7 @@ target 'budTestApp' do
 
   pod 'Alamofire', '~> 4.7'
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'AlamofireImage', '~> 3.4'
 
   # Pods for budTestApp
 

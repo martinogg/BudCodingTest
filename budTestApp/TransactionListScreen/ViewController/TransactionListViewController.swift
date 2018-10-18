@@ -11,10 +11,14 @@ import UIKit
 class TransactionListViewController: UITableViewController, TransactionListViewControllerProtocol {
     var viewModel: TransactionListViewModelProtocol?
     
+    var transactionList: [TransactionListNetworkElement] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         TransactionListRouter.attachTransactionListModule(to: self)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     @IBAction func refreshButtonPressed() {
@@ -49,12 +53,34 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     }
     
     func update(elements: [TransactionListNetworkElement]) {
-        
-        // TODO!
+        // TODO TEST
+        self.transactionList = elements
+        self.tableView.reloadData()
     }
     
     lazy var refreshingAlert: UIAlertController = {
         
         return UIAlertController(title: "Refreshing", message: "Please wait", preferredStyle: .alert)
     }()
+}
+
+extension TransactionListViewController { // UITableViewDelegate and datasource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.transactionList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let result = tableView.dequeueReusableCell(withIdentifier: "TransactionListCell")!
+            
+        if let transactionCell = result as? TransactionListCell {
+            
+            transactionCell.configure(with: self.transactionList[indexPath.row])
+        }
+        
+        return result
+    }
+    
 }

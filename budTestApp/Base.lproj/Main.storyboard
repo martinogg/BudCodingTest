@@ -17,13 +17,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KwZ-i0-6rU">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionListCell" rowHeight="132" id="KwZ-i0-6rU" customClass="TransactionListCell" customModule="budTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KwZ-i0-6rU" id="Q18-uy-dgu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="131.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qtd-Uz-Pa1">
+                                            <rect key="frame" x="5" y="5" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="XSJ-VL-pcn"/>
+                                                <constraint firstAttribute="width" constant="80" id="o3s-DM-tfR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-8c-cHp">
+                                            <rect key="frame" x="290" y="5" width="80" height="80"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="8Ea-0s-qUy"/>
+                                                <constraint firstAttribute="height" constant="80" id="pBK-dE-Asc"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Fmc-8c-cHp" secondAttribute="bottom" constant="5" id="Eng-ug-21O"/>
+                                        <constraint firstAttribute="bottom" secondItem="qtd-Uz-Pa1" secondAttribute="bottom" constant="5" id="H44-da-hgJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fmc-8c-cHp" secondAttribute="trailing" constant="5" id="IEy-HA-xdL"/>
+                                        <constraint firstItem="qtd-Uz-Pa1" firstAttribute="top" secondItem="Q18-uy-dgu" secondAttribute="top" constant="5" id="Ien-E2-oln"/>
+                                        <constraint firstItem="Fmc-8c-cHp" firstAttribute="top" secondItem="Q18-uy-dgu" secondAttribute="top" constant="5" id="mqX-7e-Jxe"/>
+                                        <constraint firstItem="qtd-Uz-Pa1" firstAttribute="leading" secondItem="Q18-uy-dgu" secondAttribute="leading" constant="5" id="tQ8-oG-nPO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="qtd-Uz-Pa1" id="DRj-FV-gVk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

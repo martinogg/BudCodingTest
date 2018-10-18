@@ -10,11 +10,9 @@
 		4B910CD774EE963CBF961109 /* Pods_budTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE8E01FECDAB51D622AC531 /* Pods_budTestApp.framework */; };
 		EC9E2E39870008A5DC65778A /* Pods_budTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ADCB7FC0E8E29CC782EB2A /* Pods_budTestAppTests.framework */; };
 		EE98924F217910B800996C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98924E217910B800996C45 /* AppDelegate.swift */; };
-		EE989251217910B800996C45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE989250217910B800996C45 /* ViewController.swift */; };
 		EE989254217910B800996C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989252217910B800996C45 /* Main.storyboard */; };
 		EE989256217910B900996C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE989255217910B900996C45 /* Assets.xcassets */; };
 		EE989259217910B900996C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989257217910B900996C45 /* LaunchScreen.storyboard */; };
-		EE989264217910B900996C45 /* budTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE989263217910B900996C45 /* budTestAppTests.swift */; };
 		EE9892712179160000996C45 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892702179160000996C45 /* TransactionListViewController.swift */; };
 		EE9892742179165D00996C45 /* TransactionListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892732179165D00996C45 /* TransactionListProtocols.swift */; };
 		EE9892772179169B00996C45 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892762179169B00996C45 /* TransactionListViewModel.swift */; };
@@ -24,6 +22,8 @@
 		EE98928121791FAB00996C45 /* TransactionListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98928021791FAB00996C45 /* TransactionListNetwork.swift */; };
 		EE9892842179250300996C45 /* TransactionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892832179250300996C45 /* TransactionListModel.swift */; };
 		EE989287217929D800996C45 /* MockTransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE989286217929D800996C45 /* MockTransactionListViewModel.swift */; };
+		EE98928A21793D8900996C45 /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98928921793D8900996C45 /* TransactionListCell.swift */; };
+		EE98928D2179448500996C45 /* TransactionListImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98928C2179448500996C45 /* TransactionListImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +44,11 @@
 		C924EC483655224F4698FE3A /* Pods-budTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budTestApp/Pods-budTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EE98924B217910B800996C45 /* budTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE98924E217910B800996C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE989250217910B800996C45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE989253217910B800996C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE989255217910B900996C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE989258217910B900996C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE98925A217910B900996C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE98925F217910B900996C45 /* budTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE989263217910B900996C45 /* budTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = budTestAppTests.swift; sourceTree = "<group>"; };
 		EE989265217910B900996C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE9892702179160000996C45 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		EE9892732179165D00996C45 /* TransactionListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListProtocols.swift; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		EE98928021791FAB00996C45 /* TransactionListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListNetwork.swift; sourceTree = "<group>"; };
 		EE9892832179250300996C45 /* TransactionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModel.swift; sourceTree = "<group>"; };
 		EE989286217929D800996C45 /* MockTransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListViewModel.swift; sourceTree = "<group>"; };
+		EE98928921793D8900996C45 /* TransactionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
+		EE98928C2179448500996C45 /* TransactionListImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListImageCache.swift; sourceTree = "<group>"; };
 		F7F3CDD4ED977575D355D529 /* Pods-budTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-budTestApp/Pods-budTestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +129,6 @@
 			children = (
 				EE98926E2179150100996C45 /* TransactionListScreen */,
 				EE98924E217910B800996C45 /* AppDelegate.swift */,
-				EE989250217910B800996C45 /* ViewController.swift */,
 				EE989252217910B800996C45 /* Main.storyboard */,
 				EE989255217910B900996C45 /* Assets.xcassets */,
 				EE989257217910B900996C45 /* LaunchScreen.storyboard */,
@@ -142,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				EE989285217929C800996C45 /* Mocks */,
-				EE989263217910B900996C45 /* budTestAppTests.swift */,
 				EE989265217910B900996C45 /* Info.plist */,
 				EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */,
 				EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */,
@@ -153,6 +151,8 @@
 		EE98926E2179150100996C45 /* TransactionListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EE98928B2179446500996C45 /* ImageCache */,
+				EE98928821793D0400996C45 /* View */,
 				EE989282217924DB00996C45 /* Model */,
 				EE98927F21791F7700996C45 /* Network */,
 				EE9892782179174600996C45 /* Router */,
@@ -217,6 +217,22 @@
 				EE989286217929D800996C45 /* MockTransactionListViewModel.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EE98928821793D0400996C45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE98928921793D8900996C45 /* TransactionListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE98928B2179446500996C45 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				EE98928C2179448500996C45 /* TransactionListImageCache.swift */,
+			);
+			path = ImageCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +389,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-budTestApp/Pods-budTestApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
@@ -381,6 +398,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -400,10 +418,11 @@
 				EE9892742179165D00996C45 /* TransactionListProtocols.swift in Sources */,
 				EE98928121791FAB00996C45 /* TransactionListNetwork.swift in Sources */,
 				EE9892772179169B00996C45 /* TransactionListViewModel.swift in Sources */,
-				EE989251217910B800996C45 /* ViewController.swift in Sources */,
 				EE9892712179160000996C45 /* TransactionListViewController.swift in Sources */,
 				EE98924F217910B800996C45 /* AppDelegate.swift in Sources */,
+				EE98928A21793D8900996C45 /* TransactionListCell.swift in Sources */,
 				EE98927A2179177400996C45 /* TransactionListRouter.swift in Sources */,
+				EE98928D2179448500996C45 /* TransactionListImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +432,6 @@
 			files = (
 				EE98927C21791A5700996C45 /* TransactionListRouterTests.swift in Sources */,
 				EE989287217929D800996C45 /* MockTransactionListViewModel.swift in Sources */,
-				EE989264217910B900996C45 /* budTestAppTests.swift in Sources */,
 				EE98927E21791B1600996C45 /* TransactionListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
