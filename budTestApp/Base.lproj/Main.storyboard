@@ -11,7 +11,7 @@
         <!--Transaction List View Controller-->
         <scene sceneID="nZn-vE-xnU">
             <objects>
-                <tableViewController id="8r3-4W-EGT" customClass="TransactionListViewController" customModule="budTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TransactionListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8r3-4W-EGT" customClass="TransactionListViewController" customModule="budTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJr-DY-GKf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="refreshButton" destination="voA-Ok-qHW" id="gY2-b0-cEN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8f-lL-Bbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

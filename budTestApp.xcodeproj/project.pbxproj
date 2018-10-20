@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4B910CD774EE963CBF961109 /* Pods_budTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE8E01FECDAB51D622AC531 /* Pods_budTestApp.framework */; };
 		EC9E2E39870008A5DC65778A /* Pods_budTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ADCB7FC0E8E29CC782EB2A /* Pods_budTestAppTests.framework */; };
+		EE13527A217BAF1200E46ABB /* MockUIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135279217BAF1200E46ABB /* MockUIAlertController.swift */; };
+		EE13527D217BB29600E46ABB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE13527B217BB29600E46ABB /* Localizable.strings */; };
+		EE13527F217BB5C000E46ABB /* OverrideTransationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13527E217BB5C000E46ABB /* OverrideTransationListViewController.swift */; };
 		EE98924F217910B800996C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98924E217910B800996C45 /* AppDelegate.swift */; };
 		EE989254217910B800996C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989252217910B800996C45 /* Main.storyboard */; };
 		EE989256217910B900996C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE989255217910B900996C45 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		7E40BEE0CC0B1B8B1D6BFB1B /* Pods-budTestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budTestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-budTestAppTests/Pods-budTestAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF117EC45BDD862A77E9E39D /* Pods-budTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budTestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budTestAppTests/Pods-budTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C924EC483655224F4698FE3A /* Pods-budTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budTestApp/Pods-budTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EE135279217BAF1200E46ABB /* MockUIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUIAlertController.swift; sourceTree = "<group>"; };
+		EE13527C217BB29600E46ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EE13527E217BB5C000E46ABB /* OverrideTransationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideTransationListViewController.swift; sourceTree = "<group>"; };
 		EE98924B217910B800996C45 /* budTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE98924E217910B800996C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE989253217910B800996C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				EE989255217910B900996C45 /* Assets.xcassets */,
 				EE989257217910B900996C45 /* LaunchScreen.storyboard */,
 				EE98925A217910B900996C45 /* Info.plist */,
+				EE13527B217BB29600E46ABB /* Localizable.strings */,
 			);
 			path = budTestApp;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				EE989286217929D800996C45 /* MockTransactionListViewModel.swift */,
+				EE135279217BAF1200E46ABB /* MockUIAlertController.swift */,
+				EE13527E217BB5C000E46ABB /* OverrideTransationListViewController.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE989259217910B900996C45 /* LaunchScreen.storyboard in Resources */,
+				EE13527D217BB29600E46ABB /* Localizable.strings in Resources */,
 				EE989256217910B900996C45 /* Assets.xcassets in Resources */,
 				EE989254217910B800996C45 /* Main.storyboard in Resources */,
 			);
@@ -432,6 +442,8 @@
 			files = (
 				EE98927C21791A5700996C45 /* TransactionListRouterTests.swift in Sources */,
 				EE989287217929D800996C45 /* MockTransactionListViewModel.swift in Sources */,
+				EE13527F217BB5C000E46ABB /* OverrideTransationListViewController.swift in Sources */,
+				EE13527A217BAF1200E46ABB /* MockUIAlertController.swift in Sources */,
 				EE98927E21791B1600996C45 /* TransactionListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +459,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EE13527B217BB29600E46ABB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE13527C217BB29600E46ABB /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		EE989252217910B800996C45 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

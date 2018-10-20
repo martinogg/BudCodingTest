@@ -14,8 +14,12 @@ class TransactionListViewControllerTests: XCTestCase {
     var sut: TransactionListViewController!
     
     override func setUp() {
+        super.setUp()
         
-        self.sut = TransactionListViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TransactionListViewController") as! TransactionListViewController
+        self.sut = vc
+        _ = self.sut.view // To call viewDidLoad
     }
 
     override func tearDown() {
@@ -41,8 +45,72 @@ class TransactionListViewControllerTests: XCTestCase {
         }
         self.sut.viewModel = mockViewModel
         
-        self.sut.refreshButtonPressed()
+        self.sut.refreshButton.sendActions(for: .touchUpInside)
         
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testShowLoadingScreen() {
+        
+        let presentFuncCallbackExpectation = expectation(description: "presentFuncCallbackExpectation")
+        let showLoadingScreenCallbackExpectation = expectation(description: "showLoadingScreenCallbackExpectation")
+        let sut = OverrideTransationListViewController()
+        
+        sut.presentFuncCallback = { (view, _, _) in
+            
+            presentFuncCallbackExpectation.fulfill()
+            guard let alert = view as? UIAlertController else {
+                
+                XCTFail()
+                return
+            }
+            XCTAssert(alert.title == NSLocalizedString("Refreshing", comment: ""))
+            XCTAssert(alert.message == NSLocalizedString("Please wait", comment: ""))
+        }
+        
+        sut.showLoadingScreen(onComplete: {
+            
+            showLoadingScreenCallbackExpectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 5, handler: nil)
+
+        return;
+    }
+    
+    func testHideLoadingScreen() {
+        
+        let mockAlertController = MockUIAlertController()
+        let alertDismissedCallbackExpectation = expectation(description: "alertDismissedCallbackExpectation")
+        
+        self.sut.refreshingAlert = mockAlertController
+
+        self.sut.hideLoadingScreen(onComplete: {
+            
+            XCTAssert(mockAlertController.dismissCalled == true)
+            alertDismissedCallbackExpectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testShowErrorScreen() {
+        
+        let presentFuncCallbackExpectation = expectation(description: "presentFuncCallbackExpectation")
+        let sut = OverrideTransationListViewController()
+        sut.presentFuncCallback = { (view, _, _) in
+            
+            presentFuncCallbackExpectation.fulfill()
+            guard let errorAlert = view as? UIAlertController else {
+                
+                XCTFail()
+                return
+            }
+            XCTAssert(errorAlert.title == NSLocalizedString("Error", comment: ""))
+            XCTAssert(errorAlert.message == NSLocalizedString("An Error Occurred", comment: ""))
+        }
+        
+        sut.showErrorMessage()
         waitForExpectations(timeout: 5, handler: nil)
     }
 }

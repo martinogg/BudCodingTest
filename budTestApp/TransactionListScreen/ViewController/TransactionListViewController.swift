@@ -11,6 +11,8 @@ import UIKit
 class TransactionListViewController: UITableViewController, TransactionListViewControllerProtocol {
     var viewModel: TransactionListViewModelProtocol?
     
+    @IBOutlet var refreshButton: UIButton!
+    
     var transactionList: [TransactionListNetworkElement] = []
     
     override func viewDidLoad() {
@@ -27,8 +29,8 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     }
     
     func showLoadingScreen(onComplete: (()->())?) {
-        // TODO TEST
-            self.present(self.refreshingAlert, animated: true, completion: {
+
+            self.present(self.refreshingAlert, animated: false, completion: {
                 
                 onComplete?()
             })
@@ -36,7 +38,6 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     
     func hideLoadingScreen(onComplete: (()->())?) {
 
-        // TODO TEST
         self.refreshingAlert.dismiss(animated: true, completion: {
             
             onComplete?()
@@ -45,8 +46,8 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     
     func showErrorMessage() {
         
-        let alert = UIAlertController(title: "Error", message: "An Error Occurred", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("An Error Occurred", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -59,7 +60,7 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     
     lazy var refreshingAlert: UIAlertController = {
         
-        return UIAlertController(title: "Refreshing", message: "Please wait", preferredStyle: .alert)
+        return UIAlertController(title: NSLocalizedString("Refreshing", comment: ""), message: NSLocalizedString("Please wait", comment: ""), preferredStyle: .alert)
     }()
 }
 

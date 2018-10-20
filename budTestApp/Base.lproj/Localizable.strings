@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  budTestApp
+
+  Created by martin ogg on 20/10/2018.
+  Copyright © 2018 martin ogg. All rights reserved.
+*/
+
+"Error" = "Error";
+"OK" = "OK";
+"An Error Occurred" = "An Error Occurred";
+"Refreshing" = "Refreshing";
+"Please wait" = "Please wait";
