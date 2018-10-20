@@ -18,10 +18,10 @@ class TransactionListViewModel: TransactionListViewModelProtocol {
     func refreshButtonPressed() {
         // TODO TEST
         
-        self.viewController?.showLoadingScreen(true, onComplete: nil)
+        self.viewController?.showLoadingScreen(onComplete: nil)
         self.network?.requestTransactionList(onComplete: { [unowned self] (response) in
             
-            self.viewController?.showLoadingScreen(false, onComplete: {
+            self.viewController?.hideLoadingScreen(onComplete: {
                 
                 switch (response) {
                 case .error:

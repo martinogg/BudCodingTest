@@ -26,22 +26,21 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
         self.viewModel?.refreshButtonPressed()
     }
     
-    func showLoadingScreen(_ show: Bool, onComplete: (()->())?) {
+    func showLoadingScreen(onComplete: (()->())?) {
         // TODO TEST
-        
-        if (show) {
-            
             self.present(self.refreshingAlert, animated: true, completion: {
                 
                 onComplete?()
             })
-        } else {
-                
-            self.refreshingAlert.dismiss(animated: true, completion: {
+    }
+    
+    func hideLoadingScreen(onComplete: (()->())?) {
+
+        // TODO TEST
+        self.refreshingAlert.dismiss(animated: true, completion: {
             
-                onComplete?()
-            })
-        }
+            onComplete?()
+        })
     }
     
     func showErrorMessage() {
