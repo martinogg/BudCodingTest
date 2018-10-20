@@ -16,22 +16,26 @@ class TransactionListViewModel: TransactionListViewModelProtocol {
     var imageCache: TransactionListImageCacheProtocol?
     
     func refreshButtonPressed() {
-        // TODO TEST
         
         self.viewController?.showLoadingScreen(onComplete: nil)
         self.network?.requestTransactionList(onComplete: { [unowned self] (response) in
             
             self.viewController?.hideLoadingScreen(onComplete: {
                 
-                switch (response) {
-                case .error:
-                    
-                    self.viewController?.showErrorMessage()
-                case .success(let elements):
-                    
-                    self.viewController?.update(elements: elements)
-                }
+                self.handleRequestResponse(response: response)
             })
         })
+    }
+    
+    func handleRequestResponse(response: TransactionListNetworkResponse) {
+        
+        switch (response) {
+        case .error:
+            
+            self.viewController?.showErrorMessage()
+        case .success(let elements):
+            
+            self.viewController?.update(elements: elements)
+        }
     }
 }

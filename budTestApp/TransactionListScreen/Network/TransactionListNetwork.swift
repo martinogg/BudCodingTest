@@ -13,6 +13,7 @@ import AlamofireObjectMapper
 class TransactionListNetwork: TransactionListNetworkProtocol {
     
     func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->() ) {
+        //TODO TEST
         
         Alamofire.request(self.url).responseObject { (response: DataResponse<TransactionAmountData>) in
             
@@ -28,9 +29,15 @@ class TransactionListNetwork: TransactionListNetworkProtocol {
     }
     
     var url: String {
+        //TODO TEST
         get {
             
-            return Bundle.main.object(forInfoDictionaryKey: "BudAPIURL") as? String ?? ""
+            guard let budAPIURL = Bundle.main.object(forInfoDictionaryKey: "BudAPIURL") as? String else {
+                
+                fatalError("Bud API URL Not found in info.plist")
+            }
+            
+            return budAPIURL
         }
     }
 }

@@ -12,6 +12,9 @@
 		EE13527A217BAF1200E46ABB /* MockUIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135279217BAF1200E46ABB /* MockUIAlertController.swift */; };
 		EE13527D217BB29600E46ABB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE13527B217BB29600E46ABB /* Localizable.strings */; };
 		EE13527F217BB5C000E46ABB /* OverrideTransationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13527E217BB5C000E46ABB /* OverrideTransationListViewController.swift */; };
+		EE135281217BBD0400E46ABB /* TransactionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135280217BBD0400E46ABB /* TransactionListViewModelTests.swift */; };
+		EE135283217BBE0600E46ABB /* MockTransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135282217BBE0600E46ABB /* MockTransactionListViewController.swift */; };
+		EE135285217BBF5900E46ABB /* MockTransactionListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135284217BBF5900E46ABB /* MockTransactionListNetwork.swift */; };
 		EE98924F217910B800996C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98924E217910B800996C45 /* AppDelegate.swift */; };
 		EE989254217910B800996C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989252217910B800996C45 /* Main.storyboard */; };
 		EE989256217910B900996C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE989255217910B900996C45 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 		EE135279217BAF1200E46ABB /* MockUIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUIAlertController.swift; sourceTree = "<group>"; };
 		EE13527C217BB29600E46ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EE13527E217BB5C000E46ABB /* OverrideTransationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideTransationListViewController.swift; sourceTree = "<group>"; };
+		EE135280217BBD0400E46ABB /* TransactionListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelTests.swift; sourceTree = "<group>"; };
+		EE135282217BBE0600E46ABB /* MockTransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListViewController.swift; sourceTree = "<group>"; };
+		EE135284217BBF5900E46ABB /* MockTransactionListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListNetwork.swift; sourceTree = "<group>"; };
 		EE98924B217910B800996C45 /* budTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE98924E217910B800996C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE989253217910B800996C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 				EE989265217910B900996C45 /* Info.plist */,
 				EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */,
 				EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */,
+				EE135280217BBD0400E46ABB /* TransactionListViewModelTests.swift */,
 			);
 			path = budTestAppTests;
 			sourceTree = "<group>";
@@ -224,6 +231,8 @@
 				EE989286217929D800996C45 /* MockTransactionListViewModel.swift */,
 				EE135279217BAF1200E46ABB /* MockUIAlertController.swift */,
 				EE13527E217BB5C000E46ABB /* OverrideTransationListViewController.swift */,
+				EE135282217BBE0600E46ABB /* MockTransactionListViewController.swift */,
+				EE135284217BBF5900E46ABB /* MockTransactionListNetwork.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -441,9 +450,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE98927C21791A5700996C45 /* TransactionListRouterTests.swift in Sources */,
+				EE135281217BBD0400E46ABB /* TransactionListViewModelTests.swift in Sources */,
+				EE135285217BBF5900E46ABB /* MockTransactionListNetwork.swift in Sources */,
 				EE989287217929D800996C45 /* MockTransactionListViewModel.swift in Sources */,
 				EE13527F217BB5C000E46ABB /* OverrideTransationListViewController.swift in Sources */,
 				EE13527A217BAF1200E46ABB /* MockUIAlertController.swift in Sources */,
+				EE135283217BBE0600E46ABB /* MockTransactionListViewController.swift in Sources */,
 				EE98927E21791B1600996C45 /* TransactionListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
