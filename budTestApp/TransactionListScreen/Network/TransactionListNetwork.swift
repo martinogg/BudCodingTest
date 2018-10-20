@@ -10,13 +10,11 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-let URL = "https://www.mocky.io/v2/5b33bdb43200008f0ad1e256" // Hard coded URLs FTW
-
 class TransactionListNetwork: TransactionListNetworkProtocol {
     
     func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->() ) {
         
-        Alamofire.request(URL).responseObject { (response: DataResponse<TransactionAmountData>) in
+        Alamofire.request(self.url).responseObject { (response: DataResponse<TransactionAmountData>) in
             
             guard let successResponse = response.result.value,
                 let responseArray = successResponse.data else {
@@ -26,6 +24,13 @@ class TransactionListNetwork: TransactionListNetworkProtocol {
             }
             
             onComplete(.success(responseArray))
+        }
+    }
+    
+    var url: String {
+        get {
+            
+            return Bundle.main.object(forInfoDictionaryKey: "BudAPIURL") as? String ?? ""
         }
     }
 }
