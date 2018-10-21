@@ -66,7 +66,6 @@ class TransactionAmount: Mappable {
     }
 }
 
-
 class TransactionProduct: Mappable {
     
     var id: Int?

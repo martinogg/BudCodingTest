@@ -55,7 +55,7 @@ class TransactionListViewModelTests: XCTestCase {
         
         let updateCallbackExpectation = expectation(description: "updateCallbackExpectation")
         let mockViewController = MockTransactionListViewController()
-        let mockResponseElements: [TransactionListNetworkElement] = [] // TODO Populate some response elements to check properly later on
+        let mockResponseElements: [TransactionListNetworkElement] = MockJSONData.mockJSONData()!.data!
         let mockResponse: TransactionListNetworkResponse = .success(mockResponseElements)
         
         mockViewController.showErrorMessageCallback = {
@@ -66,7 +66,7 @@ class TransactionListViewModelTests: XCTestCase {
         mockViewController.updateCallback = { response in
             
             updateCallbackExpectation.fulfill()
-            XCTAssert(response.count == mockResponseElements.count) // TODO: Check elements properly once the list is actually populated
+            XCTAssert(response.count == mockResponseElements.count)
         }
         
         self.sut.viewController = mockViewController

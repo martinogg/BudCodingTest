@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AlamofireImage
 
 class TransactionListRouter: TransactionListRouterProtocol {
     
@@ -15,7 +16,7 @@ class TransactionListRouter: TransactionListRouterProtocol {
         let viewModel = TransactionListViewModel()
         let router = TransactionListRouter()
         let network = TransactionListNetwork()
-        let imageCache = TransactionListImageCache()
+        let imageCache = TransactionListImageCache(imageCache: AutoPurgingImageCache())
         
         viewModel.viewController = transactionViewController
         viewModel.router = router

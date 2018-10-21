@@ -17,7 +17,6 @@ class TransactionListCell: UITableViewCell, TransactionListCellProtocol {
     @IBOutlet var price: UILabel!
     
     func configure(with element:TransactionListNetworkElement) {
-        //TODO TEST
         
         self.icon.image = UIImage(named: "loading")
         

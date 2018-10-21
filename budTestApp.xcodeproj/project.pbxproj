@@ -30,6 +30,15 @@
 		EE989287217929D800996C45 /* MockTransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE989286217929D800996C45 /* MockTransactionListViewModel.swift */; };
 		EE98928A21793D8900996C45 /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98928921793D8900996C45 /* TransactionListCell.swift */; };
 		EE98928D2179448500996C45 /* TransactionListImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98928C2179448500996C45 /* TransactionListImageCache.swift */; };
+		EEE4CB15217CFA3900DB330E /* TransactionListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4CB14217CFA3900DB330E /* TransactionListModelTests.swift */; };
+		EEE4CB17217CFB2900DB330E /* testModel.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE4CB16217CFB2900DB330E /* testModel.json */; };
+		EEE4CB19217D038300DB330E /* MockJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4CB18217D038300DB330E /* MockJSONData.swift */; };
+		EEE4CB1B217D05EC00DB330E /* MockUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4CB1A217D05EC00DB330E /* MockUITableView.swift */; };
+		EEE4CB1D217D07CB00DB330E /* TransactionListNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4CB1C217D07CB00DB330E /* TransactionListNetworkTests.swift */; };
+		EEE4CB1F217D13FF00DB330E /* TransactionListCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4CB1E217D13FF00DB330E /* TransactionListCellTests.swift */; };
+		EEE4CB21217D18B300DB330E /* TransactionListImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4CB20217D18B300DB330E /* TransactionListImageCacheTests.swift */; };
+		EEE4CB23217D199600DB330E /* MockAutoPurgingImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4CB22217D199600DB330E /* MockAutoPurgingImageCache.swift */; };
+		EEE4CB25217D1D8900DB330E /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE4CB24217D1D8900DB330E /* testImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +82,15 @@
 		EE989286217929D800996C45 /* MockTransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListViewModel.swift; sourceTree = "<group>"; };
 		EE98928921793D8900996C45 /* TransactionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
 		EE98928C2179448500996C45 /* TransactionListImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListImageCache.swift; sourceTree = "<group>"; };
+		EEE4CB14217CFA3900DB330E /* TransactionListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModelTests.swift; sourceTree = "<group>"; };
+		EEE4CB16217CFB2900DB330E /* testModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testModel.json; sourceTree = "<group>"; };
+		EEE4CB18217D038300DB330E /* MockJSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSONData.swift; sourceTree = "<group>"; };
+		EEE4CB1A217D05EC00DB330E /* MockUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUITableView.swift; sourceTree = "<group>"; };
+		EEE4CB1C217D07CB00DB330E /* TransactionListNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListNetworkTests.swift; sourceTree = "<group>"; };
+		EEE4CB1E217D13FF00DB330E /* TransactionListCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCellTests.swift; sourceTree = "<group>"; };
+		EEE4CB20217D18B300DB330E /* TransactionListImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListImageCacheTests.swift; sourceTree = "<group>"; };
+		EEE4CB22217D199600DB330E /* MockAutoPurgingImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAutoPurgingImageCache.swift; sourceTree = "<group>"; };
+		EEE4CB24217D1D8900DB330E /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
 		F7F3CDD4ED977575D355D529 /* Pods-budTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-budTestApp/Pods-budTestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,11 +171,17 @@
 		EE989262217910B900996C45 /* budTestAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				EEE4CB24217D1D8900DB330E /* testImage.png */,
+				EEE4CB16217CFB2900DB330E /* testModel.json */,
 				EE989285217929C800996C45 /* Mocks */,
 				EE989265217910B900996C45 /* Info.plist */,
 				EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */,
 				EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */,
 				EE135280217BBD0400E46ABB /* TransactionListViewModelTests.swift */,
+				EEE4CB14217CFA3900DB330E /* TransactionListModelTests.swift */,
+				EEE4CB1C217D07CB00DB330E /* TransactionListNetworkTests.swift */,
+				EEE4CB1E217D13FF00DB330E /* TransactionListCellTests.swift */,
+				EEE4CB20217D18B300DB330E /* TransactionListImageCacheTests.swift */,
 			);
 			path = budTestAppTests;
 			sourceTree = "<group>";
@@ -233,6 +257,9 @@
 				EE13527E217BB5C000E46ABB /* OverrideTransationListViewController.swift */,
 				EE135282217BBE0600E46ABB /* MockTransactionListViewController.swift */,
 				EE135284217BBF5900E46ABB /* MockTransactionListNetwork.swift */,
+				EEE4CB18217D038300DB330E /* MockJSONData.swift */,
+				EEE4CB1A217D05EC00DB330E /* MockUITableView.swift */,
+				EEE4CB22217D199600DB330E /* MockAutoPurgingImageCache.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -348,6 +375,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE4CB17217CFB2900DB330E /* testModel.json in Resources */,
+				EEE4CB25217D1D8900DB330E /* testImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,13 +479,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE98927C21791A5700996C45 /* TransactionListRouterTests.swift in Sources */,
+				EEE4CB1B217D05EC00DB330E /* MockUITableView.swift in Sources */,
+				EEE4CB19217D038300DB330E /* MockJSONData.swift in Sources */,
+				EEE4CB23217D199600DB330E /* MockAutoPurgingImageCache.swift in Sources */,
 				EE135281217BBD0400E46ABB /* TransactionListViewModelTests.swift in Sources */,
 				EE135285217BBF5900E46ABB /* MockTransactionListNetwork.swift in Sources */,
+				EEE4CB1F217D13FF00DB330E /* TransactionListCellTests.swift in Sources */,
+				EEE4CB1D217D07CB00DB330E /* TransactionListNetworkTests.swift in Sources */,
 				EE989287217929D800996C45 /* MockTransactionListViewModel.swift in Sources */,
 				EE13527F217BB5C000E46ABB /* OverrideTransationListViewController.swift in Sources */,
 				EE13527A217BAF1200E46ABB /* MockUIAlertController.swift in Sources */,
 				EE135283217BBE0600E46ABB /* MockTransactionListViewController.swift in Sources */,
 				EE98927E21791B1600996C45 /* TransactionListViewControllerTests.swift in Sources */,
+				EEE4CB15217CFA3900DB330E /* TransactionListModelTests.swift in Sources */,
+				EEE4CB21217D18B300DB330E /* TransactionListImageCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

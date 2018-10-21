@@ -12,10 +12,14 @@ import AlamofireImage
 
 class TransactionListImageCache: TransactionListImageCacheProtocol {
     
-    let imageCache = AutoPurgingImageCache()
+    let imageCache: AutoPurgingImageCache
+    
+    init(imageCache: AutoPurgingImageCache) {
+        
+        self.imageCache = imageCache
+    }
     
     func image(urlString: String, onSucceed: @escaping (UIImage)->()) {
-        //TODO TEST
         
         if let cachedImage = self.imageCache.image(withIdentifier: urlString) {
             

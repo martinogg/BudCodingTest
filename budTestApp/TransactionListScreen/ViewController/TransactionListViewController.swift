@@ -29,11 +29,11 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     }
     
     func showLoadingScreen(onComplete: (()->())?) {
-
-            self.present(self.refreshingAlert, animated: false, completion: {
-                
-                onComplete?()
-            })
+        
+        self.present(self.refreshingAlert, animated: false, completion: {
+            
+            onComplete?()
+        })
     }
     
     func hideLoadingScreen(onComplete: (()->())?) {
@@ -53,7 +53,7 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     }
     
     func update(elements: [TransactionListNetworkElement]) {
-        // TODO TEST
+
         self.transactionList = elements
         self.tableView.reloadData()
     }

@@ -113,4 +113,22 @@ class TransactionListViewControllerTests: XCTestCase {
         sut.showErrorMessage()
         waitForExpectations(timeout: 5, handler: nil)
     }
+    
+    func testUpdate() {
+        
+        let reloadDataExpectation = expectation(description: "reloadDataExpectation")
+        let mockElements: [TransactionListNetworkElement] = MockJSONData.mockJSONData()!.data!
+        let mockTableView = MockUITableView()
+        
+        mockTableView.reloadDataCallBack = { [unowned self] in
+            
+            reloadDataExpectation.fulfill()
+            XCTAssert(self.sut.transactionList.count == 10)
+        }
+        self.sut.tableView = mockTableView
+
+        self.sut.update(elements: mockElements)
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
 }
