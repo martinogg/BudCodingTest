@@ -50,9 +50,7 @@ class TransactionListNetworkTests: XCTestCase {
         
         let requestTransactionListOnCompleteExpectation = expectation(description: "requestTransactionListOnCompleteExpectation")
         
-        //let testBundle = Bundle(for: type(of: self))
-        //self.sut.url = testBundle.path(forResource: "testModel", ofType: "json")!
-        //TODO: Currently this is using online api call, but it fails when it has a url path to json test file locally. 
+        self.sut.url = "file://" + Bundle(for: type(of: self)).resourcePath! + "/testModel.json"
         
         self.sut.requestTransactionList(onComplete: { (response) in
             

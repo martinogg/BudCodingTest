@@ -35,10 +35,7 @@ class TransactionListImageCacheTests: XCTestCase {
             imageCacheImageFuncCallbackExpectation.fulfill()
         }
         
-        //let testBundle = Bundle(for: type(of: self))
-        //let imageUrl = testBundle.path(forResource: "testImage", ofType: "png")!
-        let imageUrl = "https://storage.googleapis.com/budcraftstorage/uploads/products/lloyds-bank/Llyods_Favicon-1_161201_091641.jpg"
-        //TODO: Currently this is using online image request, but it fails when it has a url path to json test file locally.
+        let imageUrl = "file://" + Bundle(for: type(of: self)).resourcePath! + "/testImage.png"
         
         self.sut = TransactionListImageCache(imageCache: mockImageCache)
         
