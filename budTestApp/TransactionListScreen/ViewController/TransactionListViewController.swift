@@ -9,7 +9,7 @@
 import UIKit
 
 class TransactionListViewController: UITableViewController, TransactionListViewControllerProtocol {
-    var viewModel: TransactionListViewModelProtocol?
+    var presenter: TransactionListPresenterProtocol?
     
     @IBOutlet var refreshButton: UIButton!
     
@@ -25,7 +25,7 @@ class TransactionListViewController: UITableViewController, TransactionListViewC
     
     @IBAction func refreshButtonPressed() {
         
-        self.viewModel?.refreshButtonPressed()
+        self.presenter?.refreshButtonPressed()
     }
     
     func showLoadingScreen(onComplete: (()->())?) {
@@ -77,7 +77,7 @@ extension TransactionListViewController { // UITableViewDelegate and datasource
             
         if let transactionCell = result as? TransactionListCell {
             
-            transactionCell.cacheService = self.viewModel?.imageCache
+            transactionCell.cacheService = self.presenter?.interactor?.dataManager?.imageCache
             transactionCell.configure(with: self.transactionList[indexPath.row])
         }
         
@@ -85,3 +85,4 @@ extension TransactionListViewController { // UITableViewDelegate and datasource
     }
     
 }
+

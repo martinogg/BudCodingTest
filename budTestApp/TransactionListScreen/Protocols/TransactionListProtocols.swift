@@ -10,7 +10,7 @@ import UIKit
 
 protocol TransactionListViewControllerProtocol: class {
     
-    var viewModel: TransactionListViewModelProtocol? {get set}
+    var presenter: TransactionListPresenterProtocol? {get set}
     
     func showLoadingScreen(onComplete: (()->())?)
     func hideLoadingScreen(onComplete: (()->())?)
@@ -18,6 +18,34 @@ protocol TransactionListViewControllerProtocol: class {
     func update(elements: [TransactionListNetworkElement])
 }
 
+protocol TransactionListInteractorProtocol: class {
+ 
+    var dataManager: TransactionListDataManagerProtocol? {get set}
+    var presenter: TransactionListPresenterProtocol? {get set}
+    
+    func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->() )
+}
+
+protocol TransactionListDataManagerProtocol: class {
+
+    var network: TransactionListNetworkProtocol? {get set}
+    var imageCache: TransactionListImageCacheProtocol? {get set}
+    
+    func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse)->() )
+    func image(urlString: String, onSucceed: @escaping (UIImage)->())
+}
+
+protocol TransactionListPresenterProtocol: class {
+    
+    var viewController: TransactionListViewControllerProtocol? {get set}
+    var interactor: TransactionListInteractorProtocol? {get set}
+    var router: TransactionListRouterProtocol? {get set}
+    
+    func refreshButtonPressed()
+}
+
+// dddd to go
+/*
 protocol TransactionListViewModelProtocol: class {
     
     var viewController: TransactionListViewControllerProtocol? {get set}
@@ -27,6 +55,7 @@ protocol TransactionListViewModelProtocol: class {
     
     func refreshButtonPressed()
 }
+ */
 
 protocol TransactionListRouterProtocol: class {
     

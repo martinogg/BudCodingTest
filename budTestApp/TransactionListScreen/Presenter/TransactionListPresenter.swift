@@ -1,26 +1,23 @@
 //
-//  TransactionListViewModel.swift
+//  TransactionListPresenter.swift
 //  budTestApp
 //
-//  Created by martin ogg on 18/10/2018.
+//  Created by martin ogg on 28/10/2018.
 //  Copyright © 2018 martin ogg. All rights reserved.
 //
 
-// dddd NO VIEW MODEL
-
 import Foundation
-/*
-class TransactionListViewModel: TransactionListViewModelProtocol {
+
+class TransactionListPresenter: TransactionListPresenterProtocol {
     
-    var router: TransactionListRouterProtocol?
     weak var viewController: TransactionListViewControllerProtocol?
-    var network: TransactionListNetworkProtocol?
-    var imageCache: TransactionListImageCacheProtocol?
+    var interactor: TransactionListInteractorProtocol?
+    var router: TransactionListRouterProtocol?
     
     func refreshButtonPressed() {
-        
+        // TODO TEST
         self.viewController?.showLoadingScreen(onComplete: nil)
-        self.network?.requestTransactionList(onComplete: { [unowned self] (response) in
+        self.interactor?.requestTransactionList(onComplete: { [unowned self] (response) in
             
             self.viewController?.hideLoadingScreen(onComplete: {
                 
@@ -30,6 +27,7 @@ class TransactionListViewModel: TransactionListViewModelProtocol {
     }
     
     func handleRequestResponse(response: TransactionListNetworkResponse) {
+        //TODO TEST
         
         switch (response) {
         case .error:
@@ -41,4 +39,3 @@ class TransactionListViewModel: TransactionListViewModelProtocol {
         }
     }
 }
-*/

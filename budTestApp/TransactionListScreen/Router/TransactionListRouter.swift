@@ -13,15 +13,22 @@ class TransactionListRouter: TransactionListRouterProtocol {
     
     static func attachTransactionListModule(to transactionViewController: TransactionListViewControllerProtocol) {
         
-        let viewModel = TransactionListViewModel()
         let router = TransactionListRouter()
+        let presenter = TransactionListPresenter()
+        let interactor = TransactionListInteractor()
+        
         let network = TransactionListNetwork()
         let imageCache = TransactionListImageCache(imageCache: AutoPurgingImageCache())
+        let dataManager = TransactionListDataManager()
         
-        viewModel.viewController = transactionViewController
-        viewModel.router = router
-        viewModel.network = network
-        viewModel.imageCache = imageCache
-        transactionViewController.viewModel = viewModel        
+        dataManager.network = network
+        dataManager.imageCache = imageCache
+        interactor.dataManager = dataManager
+        interactor.presenter = presenter
+        presenter.router = router
+        presenter.interactor = interactor
+        presenter.viewController = transactionViewController
+        transactionViewController.presenter = presenter
+        
     }
 }

@@ -15,13 +15,15 @@
 		EE135281217BBD0400E46ABB /* TransactionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135280217BBD0400E46ABB /* TransactionListViewModelTests.swift */; };
 		EE135283217BBE0600E46ABB /* MockTransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135282217BBE0600E46ABB /* MockTransactionListViewController.swift */; };
 		EE135285217BBF5900E46ABB /* MockTransactionListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE135284217BBF5900E46ABB /* MockTransactionListNetwork.swift */; };
+		EE7FF8F72185F51300D0606D /* TransactionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FF8F62185F51300D0606D /* TransactionListPresenter.swift */; };
+		EE7FF8F92185F53900D0606D /* TransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FF8F82185F53900D0606D /* TransactionListInteractor.swift */; };
+		EE7FF8FC2185F60100D0606D /* TransactionListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FF8FB2185F60100D0606D /* TransactionListDataManager.swift */; };
 		EE98924F217910B800996C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98924E217910B800996C45 /* AppDelegate.swift */; };
 		EE989254217910B800996C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989252217910B800996C45 /* Main.storyboard */; };
 		EE989256217910B900996C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE989255217910B900996C45 /* Assets.xcassets */; };
 		EE989259217910B900996C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989257217910B900996C45 /* LaunchScreen.storyboard */; };
 		EE9892712179160000996C45 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892702179160000996C45 /* TransactionListViewController.swift */; };
 		EE9892742179165D00996C45 /* TransactionListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892732179165D00996C45 /* TransactionListProtocols.swift */; };
-		EE9892772179169B00996C45 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892762179169B00996C45 /* TransactionListViewModel.swift */; };
 		EE98927A2179177400996C45 /* TransactionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9892792179177400996C45 /* TransactionListRouter.swift */; };
 		EE98927C21791A5700996C45 /* TransactionListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */; };
 		EE98927E21791B1600996C45 /* TransactionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */; };
@@ -63,6 +65,9 @@
 		EE135280217BBD0400E46ABB /* TransactionListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelTests.swift; sourceTree = "<group>"; };
 		EE135282217BBE0600E46ABB /* MockTransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListViewController.swift; sourceTree = "<group>"; };
 		EE135284217BBF5900E46ABB /* MockTransactionListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListNetwork.swift; sourceTree = "<group>"; };
+		EE7FF8F62185F51300D0606D /* TransactionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListPresenter.swift; sourceTree = "<group>"; };
+		EE7FF8F82185F53900D0606D /* TransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractor.swift; sourceTree = "<group>"; };
+		EE7FF8FB2185F60100D0606D /* TransactionListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListDataManager.swift; sourceTree = "<group>"; };
 		EE98924B217910B800996C45 /* budTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE98924E217910B800996C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE989253217910B800996C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,6 +139,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE7FF8F42185F28B00D0606D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EE7FF8F62185F51300D0606D /* TransactionListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EE7FF8F52185F2A400D0606D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EE7FF8F82185F53900D0606D /* TransactionListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EE7FF8FA2185F5F000D0606D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				EE7FF8FB2185F60100D0606D /* TransactionListDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		EE989242217910B800996C45 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +218,9 @@
 		EE98926E2179150100996C45 /* TransactionListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EE7FF8FA2185F5F000D0606D /* DataManager */,
+				EE7FF8F52185F2A400D0606D /* Interactor */,
+				EE7FF8F42185F28B00D0606D /* Presenter */,
 				EE98928B2179446500996C45 /* ImageCache */,
 				EE98928821793D0400996C45 /* View */,
 				EE989282217924DB00996C45 /* Model */,
@@ -462,14 +494,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7FF8FC2185F60100D0606D /* TransactionListDataManager.swift in Sources */,
 				EE9892842179250300996C45 /* TransactionListModel.swift in Sources */,
 				EE9892742179165D00996C45 /* TransactionListProtocols.swift in Sources */,
 				EE98928121791FAB00996C45 /* TransactionListNetwork.swift in Sources */,
-				EE9892772179169B00996C45 /* TransactionListViewModel.swift in Sources */,
 				EE9892712179160000996C45 /* TransactionListViewController.swift in Sources */,
+				EE7FF8F72185F51300D0606D /* TransactionListPresenter.swift in Sources */,
 				EE98924F217910B800996C45 /* AppDelegate.swift in Sources */,
 				EE98928A21793D8900996C45 /* TransactionListCell.swift in Sources */,
 				EE98927A2179177400996C45 /* TransactionListRouter.swift in Sources */,
+				EE7FF8F92185F53900D0606D /* TransactionListInteractor.swift in Sources */,
 				EE98928D2179448500996C45 /* TransactionListImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
