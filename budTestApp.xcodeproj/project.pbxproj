@@ -24,6 +24,7 @@
 		EE7FF9062186054900D0606D /* MockTransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FF9052186054900D0606D /* MockTransactionListInteractor.swift */; };
 		EE7FF908218608BC00D0606D /* MockTransactionListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FF907218608BC00D0606D /* MockTransactionListDataManager.swift */; };
 		EE7FF90A21860D1800D0606D /* MockTransactionListImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FF90921860D1800D0606D /* MockTransactionListImageCache.swift */; };
+		EE7FF9122186296800D0606D /* budTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FF9112186296800D0606D /* budTestAppUITests.swift */; };
 		EE98924F217910B800996C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98924E217910B800996C45 /* AppDelegate.swift */; };
 		EE989254217910B800996C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE989252217910B800996C45 /* Main.storyboard */; };
 		EE989256217910B900996C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE989255217910B900996C45 /* Assets.xcassets */; };
@@ -49,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EE7FF9142186296800D0606D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE989243217910B800996C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE98924A217910B800996C45;
+			remoteInfo = budTestApp;
+		};
 		EE989260217910B900996C45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EE989243217910B800996C45 /* Project object */;
@@ -79,6 +87,9 @@
 		EE7FF9052186054900D0606D /* MockTransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListInteractor.swift; sourceTree = "<group>"; };
 		EE7FF907218608BC00D0606D /* MockTransactionListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListDataManager.swift; sourceTree = "<group>"; };
 		EE7FF90921860D1800D0606D /* MockTransactionListImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListImageCache.swift; sourceTree = "<group>"; };
+		EE7FF90F2186296800D0606D /* budTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE7FF9112186296800D0606D /* budTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = budTestAppUITests.swift; sourceTree = "<group>"; };
+		EE7FF9132186296800D0606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE98924B217910B800996C45 /* budTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE98924E217910B800996C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE989253217910B800996C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +120,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EE7FF90C2186296800D0606D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE989248217910B800996C45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,11 +192,21 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		EE7FF9102186296800D0606D /* budTestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE7FF9112186296800D0606D /* budTestAppUITests.swift */,
+				EE7FF9132186296800D0606D /* Info.plist */,
+			);
+			path = budTestAppUITests;
+			sourceTree = "<group>";
+		};
 		EE989242217910B800996C45 = {
 			isa = PBXGroup;
 			children = (
 				EE98924D217910B800996C45 /* budTestApp */,
 				EE989262217910B900996C45 /* budTestAppTests */,
+				EE7FF9102186296800D0606D /* budTestAppUITests */,
 				EE98924C217910B800996C45 /* Products */,
 				27A8343D9DC68DEB657C16D1 /* Pods */,
 				68FC4819367FD55791266FFE /* Frameworks */,
@@ -190,6 +218,7 @@
 			children = (
 				EE98924B217910B800996C45 /* budTestApp.app */,
 				EE98925F217910B900996C45 /* budTestAppTests.xctest */,
+				EE7FF90F2186296800D0606D /* budTestAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -320,6 +349,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EE7FF90E2186296800D0606D /* budTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE7FF9182186296800D0606D /* Build configuration list for PBXNativeTarget "budTestAppUITests" */;
+			buildPhases = (
+				EE7FF90B2186296800D0606D /* Sources */,
+				EE7FF90C2186296800D0606D /* Frameworks */,
+				EE7FF90D2186296800D0606D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE7FF9152186296800D0606D /* PBXTargetDependency */,
+			);
+			name = budTestAppUITests;
+			productName = budTestAppUITests;
+			productReference = EE7FF90F2186296800D0606D /* budTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		EE98924A217910B800996C45 /* budTestApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE989268217910B900996C45 /* Build configuration list for PBXNativeTarget "budTestApp" */;
@@ -368,6 +415,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "martin ogg";
 				TargetAttributes = {
+					EE7FF90E2186296800D0606D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = EE98924A217910B800996C45;
+					};
 					EE98924A217910B800996C45 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -392,11 +443,19 @@
 			targets = (
 				EE98924A217910B800996C45 /* budTestApp */,
 				EE98925E217910B900996C45 /* budTestAppTests */,
+				EE7FF90E2186296800D0606D /* budTestAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EE7FF90D2186296800D0606D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE989249217910B800996C45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +554,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EE7FF90B2186296800D0606D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7FF9122186296800D0606D /* budTestAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE989247217910B800996C45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,6 +610,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EE7FF9152186296800D0606D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE98924A217910B800996C45 /* budTestApp */;
+			targetProxy = EE7FF9142186296800D0606D /* PBXContainerItemProxy */;
+		};
 		EE989261217910B900996C45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EE98924A217910B800996C45 /* budTestApp */;
@@ -578,6 +650,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EE7FF9162186296800D0606D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = budTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinogg.budTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = budTestApp;
+			};
+			name = Debug;
+		};
+		EE7FF9172186296800D0606D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = budTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinogg.budTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = budTestApp;
+			};
+			name = Release;
+		};
 		EE989266217910B900996C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -775,6 +883,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EE7FF9182186296800D0606D /* Build configuration list for PBXNativeTarget "budTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE7FF9162186296800D0606D /* Debug */,
+				EE7FF9172186296800D0606D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EE989246217910B800996C45 /* Build configuration list for PBXProject "budTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
