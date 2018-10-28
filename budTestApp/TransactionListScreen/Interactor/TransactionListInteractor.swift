@@ -13,7 +13,6 @@ class TransactionListInteractor: TransactionListInteractorProtocol {
     weak var presenter: TransactionListPresenterProtocol?
 
     func requestTransactionList(onComplete: @escaping (TransactionListNetworkResponse) -> ()) {
-        // TODO TEST
         
         self.dataManager?.requestTransactionList(onComplete: onComplete)
     }

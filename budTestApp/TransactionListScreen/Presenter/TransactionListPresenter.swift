@@ -15,7 +15,7 @@ class TransactionListPresenter: TransactionListPresenterProtocol {
     var router: TransactionListRouterProtocol?
     
     func refreshButtonPressed() {
-        // TODO TEST
+        
         self.viewController?.showLoadingScreen(onComplete: nil)
         self.interactor?.requestTransactionList(onComplete: { [unowned self] (response) in
             
@@ -27,7 +27,6 @@ class TransactionListPresenter: TransactionListPresenterProtocol {
     }
     
     func handleRequestResponse(response: TransactionListNetworkResponse) {
-        //TODO TEST
         
         switch (response) {
         case .error:

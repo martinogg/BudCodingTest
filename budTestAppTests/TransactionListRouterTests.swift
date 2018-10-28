@@ -11,21 +11,19 @@ import XCTest
 
 class TransactionListRouterTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
     func testAttachTransactionListModule() {
         let mockVC = TransactionListViewController()
         
         TransactionListRouter.attachTransactionListModule(to: mockVC)
         
-        XCTAssert(mockVC.viewModel != nil)
-        XCTAssert(mockVC.viewModel?.viewController != nil)
-        XCTAssert(mockVC.viewModel?.router != nil)
-        XCTAssert(mockVC.viewModel?.network != nil)
-        XCTAssert(mockVC.viewModel?.imageCache != nil)
-        
+        XCTAssert(mockVC.presenter != nil)
+        XCTAssert(mockVC.presenter?.viewController != nil)
+        XCTAssert(mockVC.presenter?.router != nil)
+        XCTAssert(mockVC.presenter?.interactor != nil)
+        XCTAssert(mockVC.presenter?.interactor?.presenter != nil)
+        XCTAssert(mockVC.presenter?.interactor?.dataManager != nil)
+        XCTAssert(mockVC.presenter?.interactor?.dataManager?.imageCache != nil)
+        XCTAssert(mockVC.presenter?.interactor?.dataManager?.network != nil)
     }
 
 }

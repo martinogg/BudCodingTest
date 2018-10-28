@@ -30,7 +30,7 @@ class TransactionListViewControllerTests: XCTestCase {
         
         self.sut.viewDidLoad()
         
-        XCTAssert(self.sut.viewModel != nil)
+        XCTAssert(self.sut.presenter != nil)
         // Note: The Module attach function is a static! Can't mock, but measure the results of calling the attach function.
         // If the storyboard wasn't used, the Router could be injected on init and mock it here
     }
@@ -38,12 +38,12 @@ class TransactionListViewControllerTests: XCTestCase {
     func testRefreshButtonPressed() {
         
         let refreshButtonPressedExpectation = expectation(description: "refreshButtonPressedExpectation")
-        let mockViewModel = MockTransactionListViewModel()
-        mockViewModel.refreshButtonPressedCallBack = {
+        let mockPresenter = MockTransactionListPresenter()
+        mockPresenter.refreshButtonPressedCallBack = {
             
             refreshButtonPressedExpectation.fulfill()
         }
-        self.sut.viewModel = mockViewModel
+        self.sut.presenter = mockPresenter
         
         self.sut.refreshButton.sendActions(for: .touchUpInside)
         

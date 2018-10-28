@@ -1,23 +1,23 @@
 //
-//  TransactionListViewModelTests.swift
+//  TransactionListPresenterTests.swift
 //  budTestAppTests
 //
-//  Created by martin ogg on 20/10/2018.
+//  Created by martin ogg on 28/10/2018.
 //  Copyright © 2018 martin ogg. All rights reserved.
 //
 
 import XCTest
 @testable import budTestApp
 
-class TransactionListViewModelTests: XCTestCase {
+class TransactionListPresenterTests: XCTestCase {
 
-    var sut: TransactionListViewModel!
+    var sut: TransactionListPresenter!
     
     override func setUp() {
-    
-        self.sut = TransactionListViewModel()
+        
+        self.sut = TransactionListPresenter()
     }
-
+    
     func testRefreshButtonPressed() {
         
         let showLoadingScreenExpection = expectation(description: "showLoadingScreenExpection")
@@ -35,16 +35,16 @@ class TransactionListViewModelTests: XCTestCase {
             hideLoadingScreenCallbackExpection.fulfill()
         }
         
-        let mockNetwork = MockTransactionListNetwork()
-        mockNetwork.requestTransactionListToRespond = .error
+        let mockInteractor = MockTransactionListInteractor()
+        mockInteractor.requestTransactionListToRespond = .error
         
-        mockNetwork.requestTransactionListCallback = {
+        mockInteractor.requestTransactionListCallback = {
             
             requestTransactionListExpectation.fulfill()
         }
         
         self.sut.viewController = mockViewController
-        self.sut.network = mockNetwork
+        self.sut.interactor = mockInteractor
         
         self.sut.refreshButtonPressed()
         
@@ -98,4 +98,6 @@ class TransactionListViewModelTests: XCTestCase {
         
         waitForExpectations(timeout: 5, handler: nil)
     }
+
+
 }

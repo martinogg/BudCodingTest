@@ -1,24 +1,24 @@
 //
-//  MockTransactionListViewModel.swift
+//  MockTransactionListPresenter.swift
 //  budTestAppTests
 //
-//  Created by martin ogg on 18/10/2018.
+//  Created by martin ogg on 28/10/2018.
 //  Copyright © 2018 martin ogg. All rights reserved.
 //
 
 import Foundation
 @testable import budTestApp
 
-class MockTransactionListViewModel: TransactionListViewModelProtocol {
-    var imageCache: TransactionListImageCacheProtocol?
+class MockTransactionListPresenter: TransactionListPresenterProtocol {
+    
     weak var viewController: TransactionListViewControllerProtocol?
+    var interactor: TransactionListInteractorProtocol?
     var router: TransactionListRouterProtocol?
-    var network: TransactionListNetworkProtocol?
     
     var refreshButtonPressedCallBack: (()->())?
     
     func refreshButtonPressed() {
         
         self.refreshButtonPressedCallBack?()
-    }
+    }    
 }

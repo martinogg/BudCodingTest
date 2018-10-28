@@ -10,8 +10,8 @@ import Foundation
 @testable import budTestApp
 
 class MockTransactionListViewController: TransactionListViewControllerProtocol {
-    var viewModel: TransactionListViewModelProtocol?
-    
+    var presenter: TransactionListPresenterProtocol?
+        
     var showLoadingScreenCallback: (()->())?
     var hideLoadingScreenCallback: (()->())?
     var showErrorMessageCallback: (()->())?
