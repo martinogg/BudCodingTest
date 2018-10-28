@@ -78,7 +78,6 @@
 		EE989265217910B900996C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE9892702179160000996C45 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		EE9892732179165D00996C45 /* TransactionListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListProtocols.swift; sourceTree = "<group>"; };
-		EE9892762179169B00996C45 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		EE9892792179177400996C45 /* TransactionListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRouter.swift; sourceTree = "<group>"; };
 		EE98927B21791A5700996C45 /* TransactionListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListRouterTests.swift; sourceTree = "<group>"; };
 		EE98927D21791B1600996C45 /* TransactionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -158,6 +157,8 @@
 		EE7FF8FA2185F5F000D0606D /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				EE98928B2179446500996C45 /* ImageCache */,
+				EE98927F21791F7700996C45 /* Network */,
 				EE7FF8FB2185F60100D0606D /* TransactionListDataManager.swift */,
 			);
 			path = DataManager;
@@ -221,12 +222,9 @@
 				EE7FF8FA2185F5F000D0606D /* DataManager */,
 				EE7FF8F52185F2A400D0606D /* Interactor */,
 				EE7FF8F42185F28B00D0606D /* Presenter */,
-				EE98928B2179446500996C45 /* ImageCache */,
 				EE98928821793D0400996C45 /* View */,
 				EE989282217924DB00996C45 /* Model */,
-				EE98927F21791F7700996C45 /* Network */,
 				EE9892782179174600996C45 /* Router */,
-				EE9892752179168200996C45 /* ViewModel */,
 				EE9892722179164500996C45 /* Protocols */,
 				EE98926F2179154A00996C45 /* ViewController */,
 			);
@@ -247,14 +245,6 @@
 				EE9892732179165D00996C45 /* TransactionListProtocols.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		EE9892752179168200996C45 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EE9892762179169B00996C45 /* TransactionListViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EE9892782179174600996C45 /* Router */ = {

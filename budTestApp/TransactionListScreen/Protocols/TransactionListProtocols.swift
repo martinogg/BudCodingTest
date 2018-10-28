@@ -44,19 +44,6 @@ protocol TransactionListPresenterProtocol: class {
     func refreshButtonPressed()
 }
 
-// dddd to go
-/*
-protocol TransactionListViewModelProtocol: class {
-    
-    var viewController: TransactionListViewControllerProtocol? {get set}
-    var router: TransactionListRouterProtocol? {get set}
-    var network: TransactionListNetworkProtocol? {get set}
-    var imageCache: TransactionListImageCacheProtocol? {get set}
-    
-    func refreshButtonPressed()
-}
- */
-
 protocol TransactionListRouterProtocol: class {
     
 }
